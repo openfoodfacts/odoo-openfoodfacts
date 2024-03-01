@@ -1,0 +1,7 @@
+- Action Name: (off) Generate french translations
+  Action To Do: Execute Python Code
+  Model: Form Builder
+  Usage: Server Action
+  Action Description:
+  Action Type: ir.actions.server
+  Python Code: # see off_generate_form_translations.py

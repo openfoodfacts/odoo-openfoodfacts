@@ -1,0 +1,99 @@
+- id: __export__.ir_model_fields_9342_53402a99
+  name: x_off_languages
+  field_description: Spoken languages
+  model_id: Contact
+  ttype: many2many
+  index:
+  store: True
+  readonly:
+  relation: res.lang
+  website_form_blacklisted:
+  column1: res_partner_id
+  column2: res_lang_id
+  compute:
+  copied: True
+  depends:
+  domain: [("active", "in", (True, False))]
+  tracking: 1
+  help: Spoken languages of a volunteer / contact
+  related:
+  relation_field:
+  relation_table: x_res_lang_res_partner_rel
+  required:
+  selectable: True
+  size: 0
+  translate:
+- id: __export__.ir_model_fields_9339_6d382477
+  name: x_off_slack_id
+  field_description: Slack ID
+  model_id: Contact
+  ttype: char
+  index: True
+  store: True
+  readonly:
+  relation:
+  website_form_blacklisted:
+  column1:
+  column2:
+  compute:
+  copied: True
+  depends:
+  domain: []
+  tracking: 0
+  help: Entre nick name of the person on open food facts slack
+  related:
+  relation_field:
+  relation_table:
+  required:
+  selectable: True
+  size: 0
+  translate:
+- id: __export__.ir_model_fields_9345_4a2c334a
+  name: x_off_username
+  field_description: OFF Username
+  model_id: Contact
+  ttype: char
+  index: True
+  store: True
+  readonly:
+  relation:
+  website_form_blacklisted:
+  column1:
+  column2:
+  compute:
+  copied: True
+  depends:
+  domain: []
+  tracking: 0
+  help: Username in Open Food Facts website
+  related:
+  relation_field:
+  relation_table:
+  required:
+  selectable: True
+  size: 0
+  translate:
+- Field Name: x_off_languages_str
+  Field Label: Spoken languages
+  Model: Contact
+  Field Type: char
+  Indexed: True
+  Stored: True
+  Readonly:
+  Related Model:
+  Blacklisted in web forms: True
+  Column 1:
+  Column 2:
+  Compute:
+  Copied: True
+  Dependencies:
+  Domain: []
+  Enable Ordered Tracking: 0
+  Field Help: Spoken languages as a simple text, separate with commas
+  Related Field:
+  Relation Field:
+  Relation Table:
+  Required:
+  Selectable: True
+  Size: 0
+  Translatable:

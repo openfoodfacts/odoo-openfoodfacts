@@ -1,0 +1,27 @@
+- id: __export__.base_automation_3_2be81815
+  name: Skill pool form create contact
+  trigger: On Creation
+  active: True
+  type: ir.actions.server
+  state: code
+  filter_domain:
+  website_published: True
+  model_id: Form
+  model_id/id: formio.model_formio_form
+  code: # see skill_pool_form_create_contact.py
+  filter_domain: ["&",["state","=","COMPLETE"],["builder_id.id","=",4]]
+  action_server_id: Skill pool form create contact
+  action_server_id/id: __export__.ir_act_server_518_2259b58a
+
+- id: __export__.base_automation_4_1dd19e74
+  name: Send email to new volunteer
+  trigger: On Creation
+  model_id: Lead/Opportunity
+  model_id/id: mass_mailing_crm.model_crm_lead
+  active: True
+  type: ir.actions.server
+  state: email
+  filter_domain: [["tag_ids.name", "=", "Volunteer"]]
+  template_id: Welcome to skill pool email
+  template_id/id: crm.mail_template_demo_crm_lead
+
