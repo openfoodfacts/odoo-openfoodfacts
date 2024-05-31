@@ -1,0 +1,72 @@
+- Field Name: x_off_last_export_date
+  Field Label: Last export
+  Model: Contact
+  Field Type: date
+  Type: Custom Field
+  Indexed:
+  Stored: True
+  Readonly:
+  Related Model:
+  Blacklisted in web forms: True
+  Size: "0"
+  Required:
+  On Delete:
+  ID: "9433"
+  Domain: "[]"
+  Field Help:
+  Related Field:
+  Selectable: True
+- Field Name: x_off_last_import_date
+  Field Label: Last import
+  Model: Contact
+  Field Type: date
+  Type: Custom Field
+  Indexed:
+  Stored: True
+  Readonly:
+  Related Model:
+  Blacklisted in web forms: True
+  Size: "0"
+  Required:
+  On Delete:
+  ID: "9430"
+  Domain: "[]"
+  Field Help:
+  Related Field:
+  Selectable: True
+- Field Name: x_off_main_contact
+  Field Label: Main contact
+  Model: Contact
+  Field Type: many2one
+  Type: Custom Field
+  Indexed:
+  Stored: True
+  Readonly:
+  Related Model: res.partner
+  Blacklisted in web forms: True
+  Size: "0"
+  Required:
+  On Delete: Restrict
+  ID: "9426"
+  Domain: "[]"
+  Field Help:
+  Related Field:
+  Selectable: True
+- Field Name: x_off_org_id
+  Field Label: OFF org id
+  Model: Contact
+  Field Type: char
+  Type: Custom Field
+  Indexed: True
+  Stored: True
+  Readonly:
+  Related Model:
+  Blacklisted in web forms: True
+  Size: "0"
+  Required:
+  On Delete:
+  ID: "9423"
+  Domain: "[]"
+  Field Help: OFF org id
+  Related Field:
+  Selectable: True

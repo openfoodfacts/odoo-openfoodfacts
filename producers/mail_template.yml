@@ -1,0 +1,9 @@
+- Name: New org - welcome
+  Applies to: Contact
+  Subject: You've joined the Open Food Facts producers' platform
+  From: connect@openfoodfacts.org
+  To (Emails):
+  To (Partners): "{{ object.x_off_main_contact.id }}"
+  Report Filename:
+  Body: "<p style=\"box-sizing:border-box;margin-bottom: 0px;\">Welcome \nto Open Food Facts' producer's platform.<br></p><p style=\"box-sizing:border-box;margin-bottom: 0px;\">\nYou are the main contact for <t t-out=\"object.name or ''\" data-oe-t-inline=\"true\"></t></p>"
+  Language: "{{ object.lang }}"

@@ -1,0 +1,21 @@
+- External ID:
+  View Name: res.partner.form_off_pro
+  Website:
+  View Type: Form
+  Model: res.partner
+  Key:
+  Sequence: 100
+  Inherited View: res.partner.form
+  Arch Blob: |-
+    <xpath expr="//field[@name='name']" position="after">
+      <div class="oe_clear"/>
+      <button name="531<--replace by the action server id" type="action" string="Open in pro platform" class="oe_highlight" attrs="{'invisible': [('x_off_org_id', '=', False)]}"/>
+    </xpath>
+    <xpath expr="//field[@name='x_off_username']" position="after" attrs="{'invisible': [('is_company','=', False)]}">
+      <field name="x_off_org_id" placeholder="Open Food Facts org id"/>
+      <field name="x_off_main_contact" widget="res_partner_many2one" options="{'no_open': True, 'no_create': True}" domain="[('parent_id', '=', active_id)]" attrs="{'invisible': [('is_company','=', False)]}"/>  
+      <field name="x_off_last_import_date" readonly="1" attrs="{'invisible': [('is_company','=', False)]}"/>
+      <field name="x_off_last_export_date" readonly="1" attrs="{'invisible': [('is_company','=', False)]}"/>
+    </xpath>
+  Active: True
+  View inheritance mode: Extension View

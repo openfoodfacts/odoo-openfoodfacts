@@ -1,0 +1,7 @@
+- Action Name: Open in pro platform as org
+  Action To Do: Execute Python Code
+  Model: Contact
+  Usage: Server Action
+  Action Description:
+  Action Type: ir.actions.server
+  Python Code: # action_py/open_in_pro_plateform_as_org.py

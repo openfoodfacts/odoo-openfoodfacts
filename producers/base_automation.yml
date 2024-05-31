@@ -1,0 +1,23 @@
+- ID: __export__.base_automation_6_4355766d
+  Action Name: "[email] New org welcome"
+  Trigger: On Creation
+  Model: Contact
+  Active: True
+  Action Type: ir.actions.server
+  Action To Do: email
+  Activity User Type: specific
+  Apply on: '["&","&",["is_company","=",True],["x_off_org_id","!=",False],["x_off_main_contact","!=",False]]'
+  Binding Type: action
+  Binding View Types: list,form
+  Delay after trigger date: "0"
+  Due Date In: "0"
+  Due type: days
+  Email Template: New org - welcome
+  Email Template/ID: __export__.mail_template_31_3fbd983c
+  Log as Note: True
+  Model/ID: membership.model_res_partner
+  Note: <p><br></p>
+  Server Actions: "[email] New org welcome"
+  Server Actions/ID: __export__.ir_act_server_526_ce68d0a1
+  Usage: base_automation
+  User field name: user_id

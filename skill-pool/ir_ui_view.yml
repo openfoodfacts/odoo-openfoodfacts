@@ -35,7 +35,7 @@
     <data>
       <xpath expr="//field[@name='vat']" position="after">
         <field name="x_off_slack_id" placeholder="Slack id..."/>
-        <field name="x_off_username" placeholder="Open Food Facts username..."/>
+        <field name="x_off_username" placeholder="Open Food Facts username..." attrs="{'invisible': [('is_company','=', False)]}"/>
       </xpath>
       <xpath expr="//field[@name='category_id']" position="before">
         <field name="x_off_languages_str" placeholders="Languages, separated by commas"/>
