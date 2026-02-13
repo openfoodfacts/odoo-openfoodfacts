@@ -1,5 +1,5 @@
 - id: __export__.base_automation_3_2be81815
-  name: Skill pool form create contact
+  name: (off) Skill pool form create contact
   trigger: On Creation
   active: True
   type: ir.actions.server
@@ -14,7 +14,7 @@
   action_server_id/id: __export__.ir_act_server_518_2259b58a
 
 - id: __export__.base_automation_4_1dd19e74
-  name: Send email to new volunteer
+  name: (off) Send email to new volunteer
   trigger: On Creation
   model_id: Lead/Opportunity
   model_id/id: mass_mailing_crm.model_crm_lead
@@ -23,5 +23,17 @@
   state: email
   filter_domain: [["tag_ids.name", "=", "Volunteer"]]
   template_id: Welcome to skill pool email
-  template_id/id: crm.mail_template_demo_crm_lead
+  template_id/id: mail_template.off_skill_pool_welcome
+
+- id: __export__.base_automation_4_1dd19e74
+  name: (off) Send chatwoot email on new volunteer
+  trigger: On Creation
+  model_id: Lead/Opportunity
+  model_id/id: mass_mailing_crm.model_crm_lead
+  active: True
+  type: ir.actions.server
+  state: email
+  filter_domain: [["tag_ids.name", "=", "Volunteer"]]
+  template_id: chatwoot email on new volunteer
+  template_id/id: mail_template.off_skill_pool_chatwoot
 
