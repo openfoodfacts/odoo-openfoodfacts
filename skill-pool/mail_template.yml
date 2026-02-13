@@ -3,11 +3,12 @@
   model_id: Lead/Opportunity
   subject: Welcome {{ object.partner_id.name }} to Open Food Facts Skill Pool
   email_rom:
-  email_to: {? {(not object.partner_id and object.email_from): ''} : ''}
-  partner_to: {? {object.partner_id != False and object.partner_id.id: ''} : ''}
+  email_to: "{{ object.email_from }}"
+  partner_to:
   reply_to:
   body_html: # see off_skill_pool_welcome.html
-  language: {? {object.partner_id.lang: ''} : ''}
+  language: >-
+    {{ (object.partner_id.lang or "")[:2].lower() == "fr" and "fr_FR" or "en_US" }}
   auto_delete: True
 
 - id: off_skill_pool_chatwoot
