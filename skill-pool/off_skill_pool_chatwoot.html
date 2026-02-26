@@ -1,0 +1,82 @@
+<table border="0" cellpadding="0" cellspacing="0" style="box-sizing:border-box;padding-top: 16px; background-color: #F1F1F1; font-family:Verdana, Arial,sans-serif; color: #454748; width: 100%; border-collapse:separate;" width="100%">
+  <tbody>
+    <tr>
+      <td align="center">
+        <table border="0" cellpadding="0" cellspacing="0" width="590" style="box-sizing:border-box;padding: 24px; background-color: white; color: #454748; border-collapse:separate;">
+          <tbody>
+            <!-- CONTENT -->
+            <tr>
+              <td style="min-width: 590px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="590" style="box-sizing:border-box;min-width: 590px; background-color: white; padding: 0px 8px 0px 8px; border-collapse:separate;">
+                  <tbody>
+                    <tr>
+                      <td valign="top">
+                        <div>
+                          <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.partner_id and object.partner_id.name or ''" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span>Clara Smith</span>
+                            </t>
+                          </strong>
+                          <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <span>just joined the skill pool <br>
+                            </span>
+                          </strong>
+                          <br>language: <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.partner_id.lang or '-'" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span style="color:orange,font-size: 18px;">--lang--</span>
+                            </t>
+                          </strong>
+                          <br>spoken languages: <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.partner_id.x_off_languages_str or '-'" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span>--x_off_languages_str--</span>
+                            </t>
+                          </strong>
+                          <br>email: <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.email_from" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span>--email_from--</span>
+                            </t>
+                          </strong>
+                          <br>country: <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.partner_id.country_id.display_name or '-'" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span>--country_id.display_name--</span>
+                            </t>
+                          </strong>
+                          <br>website: <strong style="box-sizing:border-box;font-weight:bolder;">
+                            <t t-out="object.partner_id.website or '-'" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                              <span>--website--</span>
+                            </t>
+                          </strong>
+                          <br>tags: <t t-foreach="object.partner_id.category_id" t-as="tag" data-oe-t-inline="true">
+                            <strong style="box-sizing:border-box;font-weight:bolder;">
+                              <t t-out="tag.name" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                                <span>--tag_name--</span>
+                              </t>,
+                            </strong>
+                          </t>
+                          <br>
+                          <br>
+                          <a href="#" t-attf-href="https://connect.openfoodfacts.org/web#id={{object.partner_id.id}}&amp;model=res.partner&amp;view_type=form" style="text-decoration:none;box-sizing:border-box;background-color:transparent;color:#008f8c;">link to the contact</a>
+                          <br>
+                          <a href="#" t-attf-href="https://connect.openfoodfacts.org/web#id={{object.id}}&amp;model=crm.lead&amp;view_type=form" style="text-decoration:none;box-sizing:border-box;background-color:transparent;color:#008f8c;">link to the opportunity</a>
+                          <br>
+                          <br>
+                          <strong style="box-sizing:border-box;font-weight:bolder;">They wrote:</strong>
+                          <br>
+                          <t t-out="object.description or '-'" data-oe-t-inline="true" style="font-size: 13px;" contenteditable="false">
+                            <span>--comment--</span>
+                          </t>
+                          <br>
+                          <br>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

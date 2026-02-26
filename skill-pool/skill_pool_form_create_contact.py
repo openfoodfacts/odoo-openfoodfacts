@@ -16,6 +16,7 @@ try:
       # raise RuntimeError("Skill pool form: no record provided")  
       record = env["formio.form"].browse([9])[0]
       log("Creating from form %s via web: %r" % (record.id, json.loads(record.submission_data)))
+  log("Skill pool record %r build_id %r: %r" % (record.id,  record.builder_id.id, json.loads(record.submission_data)))
   # fields that directly map from the form data to odoo field
   contact_fields = {
     "email": "email",
